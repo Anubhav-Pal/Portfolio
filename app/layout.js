@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={outfit.className}>
       <body>
         <Navbar />
+        <div className="px-10">
         {children}
+        </div>
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className='flex'>
+    <div className='flex mt-10  '>
       <div>
         <div><img src="https://placehold.co/100x100" className='rounded-full' alt="" /></div>
         <div></div>

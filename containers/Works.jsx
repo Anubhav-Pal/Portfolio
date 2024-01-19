@@ -3,8 +3,8 @@ import React from 'react'
 
 const Works = () => {
   return (
-    <div>
-      <div className='font-medium mb-4'>worked as.</div>
+    <div className='flex flex-col gap-10'>
+      <div className='font-medium'>worked as.</div>
       <div><Work/></div>
     </div>
   )
