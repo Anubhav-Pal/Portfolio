@@ -7,8 +7,8 @@ const Navbar = () => {
       <Link href="/">
         <span>home</span>
       </Link>
-      <Link href="/blog">
-        <span>blog 1</span>
+      <Link href="#socials">
+        <span>socials</span>
       </Link>
       <Link href="/blog">
         <span>blog 2</span>
@@ -19,8 +19,8 @@ const Navbar = () => {
       <Link href="/blog">
         <span>blog 4</span>
       </Link>
-      <Link href="/blog">
-        <span>blog 5</span>
+      <Link href="https://drive.google.com/file/d/1Sq9ql5S9yqNJDs36m47M4b1RxxLGdIZL/view?usp=drive_link" target='_blank'>
+        <span>resume</span>
       </Link>
     </div>
   );

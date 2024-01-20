@@ -1,11 +1,15 @@
-import React from 'react'
+import me from "../public/assets/anubhav_pfp.png"
+import Image from 'next/image'
 
 const HeroSection = () => {
   return (
     <div className='flex mt-10  '>
-      <div>
-        <div><img src="https://placehold.co/100x100" className='rounded-full' alt="" /></div>
-        <div></div>
+      <div className=''>
+        <div className="relative">
+          <Image src={me} className='rounded-full w-16 ' alt="" />
+          <div className="bg-white rounded-full text-xs absolute bottom-0 right-0">🌻</div>
+        </div>
+
       </div>
       <div>
         <div className='text-2xl font-semibold'>👋 Hi, I am Anubhav</div>
