@@ -1,6 +1,10 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Contact = () => {
+    const [ishovered, setHoveredPos] = useState(false);
     const socials = [
         {
             platform: "Github",
@@ -37,7 +41,14 @@ const Contact = () => {
                     socials.map((social) => (
                         <div className='flex text-sm'>
                             <div>{social.platform}</div>
-                            <div className='text-sd'><a href={social.actualLink}>{social.link}</a></div>
+                            <div className='text-sd flex items-center' onMouseEnter={() => setHoveredPos(true)} onMouseLeave={() => setHoveredPos(false)} >
+                                <div>
+                                    <a href={social.actualLink}>{social.link}</a>
+                                </div>
+                                <div className={`${ishovered===true?'ml-5':''} pl-10`}>
+                                    <MdOutlineArrowOutward />
+                                </div>
+                            </div>
                         </div>
                     ))
                 }
