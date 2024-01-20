@@ -7,18 +7,15 @@ const Navbar = () => {
       <Link href="/">
         <span>home</span>
       </Link>
+      <div className='w-1 mt-1 h-1 rounded-full bg-gray-600 opacity-50'></div>
       <Link href="#socials">
         <span>socials</span>
       </Link>
+      <div className='w-1 mt-1 h-1 rounded-full bg-gray-600 opacity-50'></div>
       <Link href="/blog">
-        <span>blog 2</span>
+        <span>crafts</span>
       </Link>
-      <Link href="/blog">
-        <span>blog 3</span>
-      </Link>
-      <Link href="/blog">
-        <span>blog 4</span>
-      </Link>
+      <div className='w-1 mt-1 h-1 rounded-full bg-gray-600 opacity-50'></div>
       <Link href="https://drive.google.com/file/d/1Sq9ql5S9yqNJDs36m47M4b1RxxLGdIZL/view?usp=drive_link" target='_blank'>
         <span>resume</span>
       </Link>

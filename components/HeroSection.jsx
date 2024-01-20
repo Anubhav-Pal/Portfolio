@@ -6,7 +6,7 @@ const HeroSection = () => {
     <div className='flex mt-10  '>
       <div className=''>
         <div className="relative">
-          <Image src={me} className='rounded-full w-16 ' alt="" />
+          <Image src={me} className='rounded-full w-16  hover:grayscale transition-all' alt="" />
           <div className="bg-white rounded-full text-xs absolute bottom-0 right-0">🌻</div>
         </div>
 
