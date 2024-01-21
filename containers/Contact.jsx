@@ -31,21 +31,26 @@ const Contact = () => {
             link: "@anubhavpal3",
             actualLink: "https://www.behance.net/anubhavpal3"
         },
+        {
+            platform: "Resume",
+            link: "/resume",
+            actualLink: "https://www.behance.net/anubhavpal3"
+        },
 
     ]
     return (
         <div id='socials'>
             <div className='font-medium mb-4'>contact, socials.</div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col gap-5'>
                 {
                     socials.map((social) => (
-                        <div className='flex text-sm'>
+                        <div className='flex text-sm gap-5'>
                             <div>{social.platform}</div>
-                            <div className='text-sd flex items-center' onMouseEnter={() => setHoveredPos(true)} onMouseLeave={() => setHoveredPos(false)} >
+                            <div className='text-sd flex items-center gap-1' onMouseEnter={() => setHoveredPos(true)} onMouseLeave={() => setHoveredPos(false)} >
                                 <div>
                                     <a href={social.actualLink}>{social.link}</a>
                                 </div>
-                                <div className={`${ishovered===true?'ml-5':''} pl-10`}>
+                                <div className={`${ishovered===true?'ml-5':''}`}>
                                     <MdOutlineArrowOutward />
                                 </div>
                             </div>

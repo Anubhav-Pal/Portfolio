@@ -2,8 +2,8 @@ import React from 'react'
 
 const Project = () => {
   return (
-    <div className='border-l-2 pl-6 hover:border-orange-300 cursor-default transition-all'>
-      <div className='flex flex-col'>
+    <div className='border-l-2 pl-6 hover:border-orange-300 cursor-default transition-all flex flex-col gap-5'>
+      <div className='flex flex-col gap-2'>
         <div>
           <div>Software Engineering Intern, GitHub</div>
           <div>at,github.com</div>

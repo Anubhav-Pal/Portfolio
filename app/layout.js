@@ -12,9 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.className}>
-      <body>
+      <body className="">
+        <div className="md:px-10">
         <Navbar />
-        <div className="px-10">
         {children}
         </div>
       </body>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const HeroSection = () => {
   return (
-    <div className='flex mt-10  '>
+    <div className='flex mt-10 gap-1 md:gap-3 '>
       <div className=''>
         <div className="relative">
           <Image src={me} className='rounded-full w-16  hover:grayscale transition-all' alt="" />
@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
       <div>
         <div className='text-2xl font-semibold'>👋 Hi, I am Anubhav</div>
-        <div className='text-sd mt-2'>A half frontend software engineer, half designer from India.</div>
+        <div className='text-sd mt-2'>A full stack software engineer, and designer from India.</div>
         <div className='text-sd'>21, he/him</div>
       </div>
     </div>

@@ -7,8 +7,8 @@ import Works from "@/containers/Works";
 
 export default function Page() {
   return (
-    <div className="main-home-container">
-      <div className="flex flex-col gap-10">
+    <div className="main-home-container px-10 md:px-60">
+      <div className="flex flex-col gap-10 mb-24">
         <HeroSection />
         <Aboutme/>
         <Works/>
