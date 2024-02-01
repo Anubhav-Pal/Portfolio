@@ -26,8 +26,8 @@ const companies = [
 const Work = () => {
   return (
     <div className='flex flex-col gap-8'>
-      {companies.map((company) => (
-        <div className='border-l-2 pl-6 hover:border-orange-300 cursor-default transition-all flex flex-col gap-5' >
+      {companies.map((company, index) => ( // Added index parameter for unique key
+        <div className='border-l-2 pl-6 hover:border-orange-300 cursor-default transition-all flex flex-col gap-5' key={index}> {/* Added key prop */}
           <div className='flex flex-col gap-2'>
             <div>
               <div className='capitalize text-lg'>{company.position} , {company.companyName}</div>
@@ -40,12 +40,11 @@ const Work = () => {
           <div>
             <ul className='list-disc flex flex-col gap-3 list-inside'>
               {
-                company.workedOn.map((thingWorkedOn) => (
-                  <li className='text-sd text-sm'>{thingWorkedOn}</li>
+                company.workedOn.map((thingWorkedOn, idx) => ( 
+                  <li className='text-sd text-sm' key={idx}>{thingWorkedOn}</li>
                 ))
               }
             </ul>
-
           </div>
         </div >
       ))}
@@ -53,6 +52,6 @@ const Work = () => {
   )
 }
 
-export default Work
+export default Work;
 
 
