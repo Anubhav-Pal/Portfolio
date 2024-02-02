@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react"
 import images from '../../public/assets/assets.js';
+import CraftComponent from "@/components/CraftComponent.jsx";
 
 
 
@@ -20,6 +21,11 @@ export default function Page() {
                         📸
                     </div>
                 </div>
+            </div>
+
+            <div className={`${selected === "web" ? 'flex' : 'hidden'} mt-10 px-10 md:px-60`}>
+                <CraftComponent/>
+                <CraftComponent/>   
             </div>
 
             <div className={`${selected === "📸" ? 'flex' : 'hidden'} mt-10 px-10 md:px-60`} >
