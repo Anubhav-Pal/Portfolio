@@ -23,9 +23,13 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className={`${selected === "web" ? 'flex' : 'hidden'} mt-10 px-10 md:px-60`}>
+            <div className={`${selected === "web" ? 'flex flex-col' : 'hidden'} mt-10 gap-5 items-start px-10 md:px-60`}>
+                <div className="text-xs opacity-50">*hover on images*</div>
+                <div className="flex flex-col sm:flex-row gap-10">
+
                 <CraftComponent/>
                 <CraftComponent/>   
+                </div>
             </div>
 
             <div className={`${selected === "📸" ? 'flex' : 'hidden'} mt-10 px-10 md:px-60`} >
