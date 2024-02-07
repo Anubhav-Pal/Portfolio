@@ -17,6 +17,12 @@ export default function Page() {
             depllink: "https://advanced-dropdown.vercel.app/",
         },
         {
+            img: images[15],
+            heading: "Portfolio",
+            subheading: "A sleek modern UI website showcasing my experience and projects.",
+            depllink: "https://anubhavpal.vercel.app/",
+        },
+        {
             img: images[14],
             heading: "ChatAI",
             subheading: "An AI-powered chat companion for insightful conversations, built on Google Gemini API",

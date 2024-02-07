@@ -13,6 +13,7 @@ import vase from './vase.jpg';
 import dropdown from './dropdown.svg';
 import abitco from './abitco.svg';
 import chatai from './chatai.svg';
+import portfolio from './portfolio.svg';
 
 const images=[
     anime,
@@ -29,7 +30,8 @@ const images=[
     vase,
     dropdown,
     abitco,
-    chatai
+    chatai,
+    portfolio
 ]
 
 export default images;
