@@ -9,6 +9,28 @@ import CraftComponent from "@/components/CraftComponent.jsx";
 
 export default function Page() {
 
+    const craftArray = [
+        {
+            img: images[12],
+            heading: "Interactive Dropdown",
+            subheading: "Interactive Dropdown with Seamless Input Selection and Display",
+            depllink: "https://advanced-dropdown.vercel.app/",
+        },
+        {
+            img: images[14],
+            heading: "ChatAI",
+            subheading: "An AI-powered chat companion for insightful conversations, built on Google Gemini API",
+            depllink: "https://chatappanubhav.vercel.app/",
+        },
+        {
+            img: images[13],
+            heading: "Abitco Creator page",
+            subheading: "A simple modern webpage",
+            depllink: "https://abitco.vercel.app/",
+        },
+
+    ]
+
     const [selected, setSelected] = useState("web");
     return (
         <div className='flex flex-col mt-10 text-sd '>
@@ -25,12 +47,19 @@ export default function Page() {
 
             <div className={`${selected === "web" ? 'flex flex-col' : 'hidden'} mt-10 gap-5 items-start px-10 md:px-60`}>
                 <div className="text-xs opacity-50">*hover on images*</div>
-                <div className="flex flex-col sm:flex-row gap-10">
-
-                <CraftComponent/>
-                <CraftComponent/>   
+                <div className="flex  gap-10">
+                    {
+                        craftArray.map((craft, index) => {
+                            return (
+                                <div key={index} className="w-full sm:w-1/3">
+                                    <CraftComponent img={craft.img} heading={craft.heading} subheading={craft.subheading} depllink={craft.depllink} />
+                                </div>
+                            );
+                        })
+                    }
                 </div>
             </div>
+
 
             <div className={`${selected === "📸" ? 'flex' : 'hidden'} mt-10 px-10 md:px-60`} >
                 <div className="flex flex-wrap justify-around gap-1">
@@ -112,7 +141,7 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                   
+
 
                 </div>
             </div>

@@ -10,7 +10,9 @@ import redbrick from './redbrick.jpg';
 import sft from './sft.jpg';
 import sunset from './sunset.jpg';
 import vase from './vase.jpg';
-import dropdown from './dropdown.png';
+import dropdown from './dropdown.svg';
+import abitco from './abitco.svg';
+import chatai from './chatai.svg';
 
 const images=[
     anime,
@@ -25,7 +27,9 @@ const images=[
     sft,
     sunset,
     vase,
-    dropdown
+    dropdown,
+    abitco,
+    chatai
 ]
 
 export default images;

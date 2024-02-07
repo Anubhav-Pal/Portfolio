@@ -8,20 +8,20 @@ import Link from 'next/link';
 
 
 
-const CraftComponent = () => {
+const CraftComponent = ({ img, heading, subheading, depllink }) => {
     const [hovered, sethovered] = useState(false)
 
     return (
-        <div className='flex flex-col gap-2 mx-2'>
-            <div className='roun relative flex items-center justify-center cursor-pointer' onMouseEnter={() => sethovered(true)} onMouseLeave={() => sethovered(false)}>
-                <Link href="https://advanced-dropdown.vercel.app/" target='_blank' className='flex items-center justify-center'>
-                    <Image src={images[12]} className={`${hovered ? "opacity-55" : ""} w-full rounded-md shadow-md  transition-all`}></Image>
+        <div className='flex flex-col gap-2 items-center justify-between flex-wrap'>
+            <div className=' relative w-full flex items-center justify-center cursor-pointer' onMouseEnter={() => sethovered(true)} onMouseLeave={() => sethovered(false)}>
+                <Link href={depllink} target='_blank' className='flex items-center justify-center'>
+                    <Image src={img} className={`${hovered ? "opacity-55" : ""} w-full h-full object-cover object-left-top rounded-md shadow-md  transition-all`}></Image>
                     <span className={` ${hovered ? "flex" : "hidden"} p-2 absolute opacity-70 rounded-full bg-white`}><FontAwesomeIcon icon={faUpRightFromSquare} size="sm" color="gray" className='bg-white' /></span>
                 </Link>
             </div>
-            <div>
-                <div className='text-sd'>Interactive Dropdown</div>
-                <div className='text-xs opacity-60'>Interactive Dropdown with Seamless Input Selection and Display</div>
+            <div className='w-full'>
+                <div className='text-sd'>{heading}</div>
+                <div className='text-xs opacity-60'>{subheading}</div>
             </div>
         </div>
     )
