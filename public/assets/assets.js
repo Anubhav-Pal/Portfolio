@@ -14,6 +14,7 @@ import dropdown from './dropdown.svg';
 import abitco from './abitco.svg';
 import chatai from './chatai.svg';
 import portfolio from './portfolio.svg';
+import online from './online.json'
 
 const images=[
     anime,
@@ -31,7 +32,8 @@ const images=[
     dropdown,
     abitco,
     chatai,
-    portfolio
+    portfolio,
+    online
 ]
 
 export default images;

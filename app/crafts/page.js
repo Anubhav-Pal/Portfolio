@@ -52,12 +52,12 @@ export default function Page() {
             </div>
 
             <div className={`${selected === "web" ? 'flex flex-col' : 'hidden'} mt-10 gap-5 items-start px-10 md:px-60`}>
-                <div className="text-xs opacity-50">*hover on images*</div>
-                <div className="flex  gap-10">
+                <div className="text-xs opacity-50 hidden sm:flex">*hover on images*</div>
+                <div className="flex gap-3 sm:gap-10 flex-wrap">
                     {
                         craftArray.map((craft, index) => {
                             return (
-                                <div key={index} className="w-full sm:w-1/3">
+                                <div key={index} className="w-ful sm:w-1/3">
                                     <CraftComponent img={craft.img} heading={craft.heading} subheading={craft.subheading} depllink={craft.depllink} />
                                 </div>
                             );

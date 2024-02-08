@@ -15,12 +15,17 @@ const CraftComponent = ({ img, heading, subheading, depllink }) => {
         <div className='flex flex-col gap-2 items-center justify-between flex-wrap'>
             <div className=' relative w-full flex items-center justify-center cursor-pointer' onMouseEnter={() => sethovered(true)} onMouseLeave={() => sethovered(false)}>
                 <Link href={depllink} target='_blank' className='flex items-center justify-center'>
-                    <Image src={img} className={`${hovered ? "opacity-55" : ""} w-full h-full object-cover object-left-top rounded-md shadow-md  transition-all`}></Image>
+                    <Image src={img} className={`${hovered ? "opacity-55" : ""} hidden sm:flex w-full h-full object-cover object-left-top rounded-md shadow-md  transition-all`}></Image>
                     <span className={` ${hovered ? "flex" : "hidden"} p-2 absolute opacity-70 rounded-full bg-white`}><FontAwesomeIcon icon={faUpRightFromSquare} size="sm" color="gray" className='bg-white' /></span>
                 </Link>
             </div>
             <div className='w-full'>
-                <div className='text-sd'>{heading}</div>
+                <div className='text-sd hidden sm:flex'>{heading}</div>
+                <div className='text-sd underline sm:hidden'>
+                    <Link href={depllink} target='_blank' className=''>
+                        {heading}
+                    </Link>
+                </div>
                 <div className='text-xs opacity-60'>{subheading}</div>
             </div>
         </div>
