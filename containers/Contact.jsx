@@ -22,6 +22,11 @@ const Contact = () => {
             actualLink: "https://leetcode.com/anubhavpalcp/"
         },
         {
+            platform: "Gmail",
+            link: "anubhavpal.excl@gmail.com",
+            actualLink: "mailto:anubhavpal.excl@gmail.com"
+        },
+        {
             platform: "Twitter",
             link: "@AnubhavPal__",
             actualLink: "https://twitter.com/AnubhavPal__"
@@ -48,7 +53,7 @@ const Contact = () => {
                             <div>{social.platform}</div>
                             <div className='text-sd flex items-center gap-1' onMouseEnter={() => setHoveredPos(true)} onMouseLeave={() => setHoveredPos(false)} >
                                 <div>
-                                    <a href={social.actualLink}>{social.link}</a>
+                                    <a href={social.actualLink} target='_blank'>{social.link}</a>
                                 </div>
                                 <div className={`${ishovered===true?'ml-5':''}`}>
                                     <MdOutlineArrowOutward />

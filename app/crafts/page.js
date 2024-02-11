@@ -11,7 +11,7 @@ export default function Page() {
 
     const craftArray = [
         {
-            img: images[17],
+            img: images[11],
             heading: "Admin Order Dashboard",
             subheading: "Manage Orders with Ease. Enabled with Google Authentication and Redux state management",
             depllink: "https://utilize-order-dashboard.vercel.app/",
@@ -23,7 +23,7 @@ export default function Page() {
             depllink: "https://advanced-dropdown.vercel.app/",
         },
         {
-            img: images[15],
+            img: images[13],
             heading: "Portfolio",
             subheading: "A sleek modern UI website showcasing my experience and projects",
             depllink: "https://anubhavpal.vercel.app/",
@@ -35,7 +35,7 @@ export default function Page() {
             depllink: "https://chatappanubhav.vercel.app/",
         },
         {
-            img: images[13],
+            img: images[15],
             heading: "Abitco Creator page",
             subheading: "A simple modern webpage",
             depllink: "https://abitco.vercel.app/",
@@ -78,7 +78,7 @@ export default function Page() {
                     <div className="flex gap-1 justify-between w-full items-center">
                         <div className="w-1/2 flex items-center justify-end">
                             <div>
-                                <Image src={images[10]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-center" alt="an image" />
+                                <Image src={images[0]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-center" alt="an image" />
                             </div>
                         </div>
                         <div className="w-1/2 flex items-center justify-start">
@@ -97,20 +97,20 @@ export default function Page() {
                         <div className="w-1/2 flex items-center justify-start">
                             <div>
 
-                                <Image src={images[5]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-right" alt="an image" />
+                                <Image src={images[3]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-right" alt="an image" />
                             </div>
                         </div>
                     </div>
                     <div className="flex gap-1 justify-between w-full items-center">
                         <div className="w-1/2 flex items-center justify-end">
                             <div>
-                                <Image src={images[11]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-center" alt="an image" />
+                                <Image src={images[4]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-center" alt="an image" />
                             </div>
                         </div>
                         <div className="w-1/2 flex items-center justify-start">
                             <div>
 
-                                <Image src={images[3]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-center" alt="an image" />
+                                <Image src={images[5]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-center" alt="an image" />
                             </div>
                         </div>
                     </div>
@@ -143,13 +143,7 @@ export default function Page() {
                     <div className="flex gap-1 justify-between w-full items-center">
                         <div className="w-1/2 flex items-center justify-end">
                             <div>
-                                <Image src={images[0]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-top" alt="an image" />
-                            </div>
-                        </div>
-                        <div className="w-1/2 flex items-center justify-start">
-                            <div>
-
-                                <Image src={images[4]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-center" alt="an image" />
+                                <Image src={images[10]} className="rounded-3xl border-2 w-40 h-40 md:w-72 md:h-72 border-black object-cover object-top" alt="an image" />
                             </div>
                         </div>
                     </div>

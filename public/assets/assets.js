@@ -1,15 +1,15 @@
-import anime from './anime.jpg';
-import bar from './bar.jpg';
-import Bng from './Bng.jpg';
-import clouds from './clouds.jpg';
-import lotus from './lotus.jpg';
-import plane from './plane.jpg';
-import planeout from './planeout.jpg';
-import qutub from './qutub.jpg';
-import redbrick from './redbrick.jpg';
-import sft from './sft.jpg';
-import sunset from './sunset.jpg';
-import vase from './vase.jpg';
+// import anime from './anime.svg';
+import bar from './bar.svg';
+import Bng from './Bng.svg';
+import clouds from './clouds.svg';
+import lotus from './lotus.svg';
+import plane from './plane.svg';
+import planeout from './planeout.svg';
+import qutub from './qutub.svg';
+import redbrick from './redbrick.svg';
+import sft from './sft.svg';
+import sunset from './sunset.svg';
+import vase from './vase.svg';
 import dropdown from './dropdown.svg';
 import abitco from './abitco.svg';
 import chatai from './chatai.svg';
@@ -18,24 +18,23 @@ import online from './online.json'
 import utilizedashboard from './utilizedashboard.svg'
 
 const images=[
-    anime,
-    bar,
-    Bng,
-    clouds,
-    lotus,
+    sunset,
     plane,
+    Bng,
+    lotus,
+    clouds,
+    bar,
     planeout,
     qutub,
     redbrick,
     sft,
-    sunset,
     vase,
-    dropdown,
-    abitco,
-    chatai,
-    portfolio,
-    online,
     utilizedashboard,
+    dropdown,
+    portfolio,
+    chatai,
+    abitco,
+    online,
 ]
 
 export default images;
