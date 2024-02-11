@@ -11,6 +11,12 @@ export default function Page() {
 
     const craftArray = [
         {
+            img: images[17],
+            heading: "Admin Order Dashboard",
+            subheading: "Manage Orders with Ease. Enabled with Google Authentication and Redux state management",
+            depllink: "https://utilize-order-dashboard.vercel.app/",
+        },
+        {
             img: images[12],
             heading: "Interactive Dropdown",
             subheading: "Interactive Dropdown with Seamless Input Selection and Display",
@@ -19,7 +25,7 @@ export default function Page() {
         {
             img: images[15],
             heading: "Portfolio",
-            subheading: "A sleek modern UI website showcasing my experience and projects.",
+            subheading: "A sleek modern UI website showcasing my experience and projects",
             depllink: "https://anubhavpal.vercel.app/",
         },
         {

@@ -3,10 +3,11 @@ import React from 'react'
 
 const Projects = () => {
   return (
-    <div className='flex flex-col gap-5'>
-    <div className='font-medium'>projects.</div>
-    <div><Project/></div>
-  </div>
+    <div>
+      {/* // <div className='flex flex-col gap-5'> */}
+      {/* <div className='font-medium'>projects.</div>
+    <div><Project/></div> */}
+    </div>
   )
 }
 

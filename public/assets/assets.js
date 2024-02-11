@@ -15,6 +15,7 @@ import abitco from './abitco.svg';
 import chatai from './chatai.svg';
 import portfolio from './portfolio.svg';
 import online from './online.json'
+import utilizedashboard from './utilizedashboard.svg'
 
 const images=[
     anime,
@@ -33,7 +34,8 @@ const images=[
     abitco,
     chatai,
     portfolio,
-    online
+    online,
+    utilizedashboard,
 ]
 
 export default images;
