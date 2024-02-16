@@ -14,6 +14,7 @@ import dropdown from './dropdown.svg';
 import abitco from './abitco.svg';
 import chatai from './chatai.svg';
 import portfolio from './portfolio.svg';
+import tailwind from './tailwind.svg';
 import online from './online.json'
 import utilizedashboard from './utilizedashboard.svg'
 
@@ -35,6 +36,7 @@ const images=[
     chatai,
     abitco,
     online,
+    tailwind,
 ]
 
 export default images;

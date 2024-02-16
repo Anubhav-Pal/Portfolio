@@ -23,6 +23,12 @@ export default function Page() {
             depllink: "https://advanced-dropdown.vercel.app/",
         },
         {
+            img: images[17],
+            heading: "Tailwind Playground",
+            subheading: "Experiment with Tailwind CSS effortlessly on your browser",
+            depllink: "https://tailwind-playground-omega.vercel.app/",
+        },
+        {
             img: images[13],
             heading: "Portfolio",
             subheading: "A sleek modern UI website showcasing my experience and projects",
