@@ -14,7 +14,7 @@ export default function Page() {
             img: images[11],
             heading: "Admin Order Dashboard",
             subheading: "Manage Orders with Ease. Enabled with Google Authentication and Redux state management",
-            depllink: "https://utilize-order-dashboard.vercel.app/",
+            depllink: "https://assignment-task-sigma.vercel.app/",
         },
         {
             img: images[12],
