@@ -17,6 +17,18 @@ export default function Page() {
             depllink: "https://assignment-task-sigma.vercel.app/",
         },
         {
+            img: images[18],
+            heading: "PGKRAM Analytics Dashboard",
+            subheading: "Analytics tool for PGKRAM website to increase employment in Punjab.",
+            depllink: "https://pgkram.netlify.app/",
+        },
+        {
+            img: images[14],
+            heading: "ChatAI",
+            subheading: "An AI-powered chat companion for insightful conversations, built on Google Gemini API",
+            depllink: "https://chatappanubhav.vercel.app/",
+        },
+        {
             img: images[12],
             heading: "Interactive Dropdown",
             subheading: "Interactive Dropdown with Seamless Input Selection and Display",
@@ -33,12 +45,6 @@ export default function Page() {
             heading: "Portfolio",
             subheading: "A sleek modern UI website showcasing my experience and projects",
             depllink: "https://anubhavpal.vercel.app/",
-        },
-        {
-            img: images[14],
-            heading: "ChatAI",
-            subheading: "An AI-powered chat companion for insightful conversations, built on Google Gemini API",
-            depllink: "https://chatappanubhav.vercel.app/",
         },
         {
             img: images[15],

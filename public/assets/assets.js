@@ -17,6 +17,7 @@ import portfolio from './portfolio.svg';
 import tailwind from './tailwind.svg';
 import online from './online.json'
 import utilizedashboard from './utilizedashboard.svg'
+import pgkram from './pgkram.svg'
 
 const images=[
     sunset,
@@ -37,6 +38,7 @@ const images=[
     abitco,
     online,
     tailwind,
+    pgkram
 ]
 
 export default images;
