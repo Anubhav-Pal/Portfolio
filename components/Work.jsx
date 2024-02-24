@@ -39,7 +39,7 @@ const Work = () => {
         <div className='border-l-2 pl-6 hover:border-orange-300 cursor-default transition-all flex flex-col gap-5' key={index}> {/* Added key prop */}
           <div className='flex sm:flex-row flex-col items-start justify-between gap-2'>
             <div>
-              <div className='capitalize text-md '>{company.position}, {company.companyName}</div>
+              <div className='capitalize text-lg'>{company.position}, {company.companyName}</div>
               {company.companyName === "Wonder Learn Games" ? '' :
                 <div className={`text-sm `}>at, <a href={company.companyWebsiteLink}>{company.companyWebsite}</a></div>
               }
