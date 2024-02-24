@@ -1,4 +1,5 @@
-import React from 'react'
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 const companies = [
   {
@@ -41,7 +42,14 @@ const Work = () => {
             <div>
               <div className='capitalize text-lg'>{company.position}, {company.companyName}</div>
               {company.companyName === "Wonder Learn Games" ? '' :
-                <div className={`text-sm `}>at, <a href={company.companyWebsiteLink}>{company.companyWebsite}</a></div>
+                <div className="flex items-center gap-[2px]">
+                  <div className="text-sm">
+                    at, <a href={company.companyWebsiteLink}>{company.companyWebsite}</a>
+                  </div>
+                  <div>
+                    <MdOutlineArrowOutward />
+                  </div>
+                </div>
               }
             </div>
             <div className='text-sd text-sm'>{company.startingMonth} <span className={`${company.endingMonth === "" ? 'hidden' : ''}`}>-</span>  {company.endingMonth}</div>

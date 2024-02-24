@@ -39,7 +39,7 @@ const Contact = () => {
         {
             platform: "Resume",
             link: "/resume",
-            actualLink: "https://www.behance.net/anubhavpal3"
+            actualLink: "https://drive.google.com/file/d/1Sq9ql5S9yqNJDs36m47M4b1RxxLGdIZL/view?usp=drive_link"
         },
 
     ]
