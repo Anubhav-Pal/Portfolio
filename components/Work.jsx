@@ -7,7 +7,7 @@ const companies = [
     companyName: "ClientFlowX",
     companyWebsite: "clientflowx.com",
     companyWebsiteLink: "https://www.clientflowx.com/",
-    workedOn: [],
+    workedOn: ["Developed an admin dashboard and multiple pages using Next.js and TypeScript, seamlessly integrating third-party applications and backend APIs.","Developing a no-code AI website builder with custom components utilizing the Grapejs library."],
     startingMonth: "March, 2024",
     endingMonth: "present",
   },

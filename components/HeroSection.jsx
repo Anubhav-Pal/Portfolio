@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
       <div>
         <div className='text-2xl font-semibold'>👋 Hi, I am Anubhav</div>
-        <div className='text-sd mt-2'>A full stack software engineer, and designer from India.</div>
+        <div className='text-sd mt-2'>A frontend/full stack software engineer, and designer from India.</div>
         <div className='text-sd'>21, he/him</div>
       </div>
     </div>
