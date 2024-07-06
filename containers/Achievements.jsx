@@ -8,7 +8,7 @@ const Achievements = () => {
             <div className='border-l-2 pl-6 hover:border-orange-300 cursor-default transition-all'>
                 <div>
                     <ul className='list-disc flex flex-col gap-3 list-inside'>
-                        <li className='text-sd text-sm'>Selected as a <span className='font-semibold'>Top 30 Winner</span> in the 2023 <span className='font-semibold'> Samsung Solve for Tomorrow </span>, surpassing <span className='font-semibold'>70,000+</span> submissions, and earning commendation from <span className='font-semibold'> Samsung India</span> with a feature on Twitter.</li>
+                        <li className='text-sd text-sm'>Selected as a <span className='font-semibold'>Top 30 Winner</span> in the 2023 <span className='font-semibold'> Samsung Solve for Tomorrow </span>, surpassing <span className='font-semibold'>70,000+</span> submissions, and earning commendation from <span className='font-semibold'> Samsung India</span> on Twitter.</li>
                         <li className='text-sd text-sm'> <span className='font-semibold'> Finalist at SIH 2023</span> - A Prestigious National Level Hackthon</li>
                         <li className='text-sd text-sm'> <span className='font-semibold'> Trident Hacks 2023</span> - Nationals 2nd runner up out of 800 teams</li>
                         <li className='text-sd text-sm'> <span className='font-semibold'>Google Developers Student Club</span>: UI/UX designer & developer (April 2022- Present)</li>

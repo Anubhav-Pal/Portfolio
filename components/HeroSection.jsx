@@ -1,4 +1,4 @@
-import me from "../public/assets/anubhav_pfp.png"
+import me from "../public/assets/anubhav_pfp.jpg"
 import Image from 'next/image'
 
 const HeroSection = () => {

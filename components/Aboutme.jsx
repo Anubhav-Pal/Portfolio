@@ -15,7 +15,7 @@ const Aboutme = () => {
         <div>
           Available for freelance work
         </div>
-        <div>
+        <div className='mt-[4px]'>
           <Lottie
             className='w-5'
             animationData={online} // Use the desired Lottie animation from assets
