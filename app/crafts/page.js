@@ -160,18 +160,26 @@ export default function Page() {
               className=" overflow-hidden rounded-3xl border-2 border-black transform transition-transform duration-300"
               style={
                 !imagesHovered
-                  ? {
-                      position: "absolute",
-                      top:
-                        index < imagesArray.length / 2
-                          ? `${index * 7}%` // Move images downward
-                          : `${(imagesArray.length - index - 1) * 7}%`, // Move images upward
-                      left: `${index * 7}%`, // Move images to the right,
-                      zIndex:
-                        index < imagesArray.length / 2
-                          ? `${index * 7}` // Move images downward
-                          : `${(imagesArray.length - index - 1) * 7}`,
-                    }
+                  ? index < imagesArray.length / 2
+                    ? {
+                        position: "absolute",
+                        top: `${index * 7}%`, // Move images downward
+                        left: `${index * 7}%`, // Move images to the right,
+                        zIndex:
+                          index < imagesArray.length / 2
+                            ? `${index * 7}` // Move images downward
+                            : `${(imagesArray.length - index - 1) * 7}`,
+                      }
+                    : {
+                        position: "absolute",
+                        position: "absolute",
+                        top: `${(imagesArray.length - index - 1) * 7}%`, // Move images downward
+                        right: `${(imagesArray.length - index - 1) * 7}%`, // Move images to the right,
+                        zIndex:
+                          index < imagesArray.length / 2
+                            ? `${index * 7}` // Move images downward
+                            : `${(imagesArray.length - index - 1) * 7}`,
+                      }
                   : {
                       zIndex: 20,
                       transform: "scale(1.05)",
