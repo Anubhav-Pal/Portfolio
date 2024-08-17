@@ -26,6 +26,7 @@ import {
 } from "@/public/assets/assets";
 
 export default function Page() {
+  const [imagesHovered, setImagesHovered] = useState(false);
   const craftArray = [
     {
       img: appointly,
@@ -144,21 +145,43 @@ export default function Page() {
         </div>
       </div>
 
-      <div className={`${selected === "📸" ? "flex" : "hidden"} mt-10`}>
-        <div className="flex flex-wrap justify-start gap-2 md:gap-4 xl:gap-6">
-          {imagesArray.map((src, index) => (
+      <div
+        onMouseEnter={() => setImagesHovered(true)}
+        onMouseLeave={() => setImagesHovered(false)}
+        className={`${
+          selected === "📸" ? "block" : "hidden"
+        } mt-10 py-5 relative h-full min-h-[300px] w-full flex flex-wrap gap-5 justify-center`}
+      >
+        {imagesArray.map((src, index) => {
+          const randomTop = Math.random() * 70;
+          const randomLeft = Math.random() * 70;
+
+          return (
             <div
               key={index}
-              className="flex items-center justify-end w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64"
+              onMouseEnter={() => setImagesHovered(true)}
+              className=" overflow-hidden mb-3 hover:scale-105 rounded-3xl border-2 border-black transform transition-transform duration-300 mb-10"
+              style={
+                !imagesHovered
+                  ? {
+                      position: "absolute",
+                      top: `${randomTop}%`,
+                      left: `${randomLeft}%`,
+                    }
+                  : {
+                      zIndex: 20,
+                      transform: "scale(1.05)",
+                    }
+              }
             >
               <Image
                 src={src}
-                className="rounded-3xl border-2 w-full h-full border-black object-cover object-center"
-                alt="an image"
+                className="w-32 h-32 sm:w-48 hover:scale-105  transform transition-transform duration-300 sm:h-48 md:w-64 md:h-64 object-cover object-center"
+                alt={`image-${index}`}
               />
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </div>
   );
