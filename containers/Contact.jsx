@@ -57,7 +57,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col justify-center items-start gap-5">
           {socials.map((social) => (
-            <div className="flex text-sm gap-5">
+            <div key={social} className="flex text-sm gap-5">
               <div
                 className="text-sd flex items-center gap-1"
                 onMouseEnter={() => setHoveredPos(true)}
