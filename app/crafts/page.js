@@ -85,12 +85,12 @@ export default function Page() {
     },
   ];
   const imagesArray = [
+    plane,
     sunset,
-    bar,
     Bng,
     clouds,
     lotus,
-    plane,
+    bar,
     planeout,
     qutub,
     redbrick,
@@ -149,24 +149,28 @@ export default function Page() {
         onMouseEnter={() => setImagesHovered(true)}
         onMouseLeave={() => setImagesHovered(false)}
         className={`${
-          selected === "📸" ? "block" : "hidden"
-        } mt-10 py-5 relative h-full min-h-[300px] w-full flex flex-wrap gap-5 justify-center`}
+          selected === "📸" ? "flex" : "hidden"
+        } mt-10 py-5 relative h-full min-h-[300px] w-full  flex-wrap gap-5 justify-center items-center`}
       >
         {imagesArray.map((src, index) => {
-          const randomTop = Math.random() * 70;
-          const randomLeft = Math.random() * 70;
-
           return (
             <div
               key={index}
               onMouseEnter={() => setImagesHovered(true)}
-              className=" overflow-hidden mb-3 hover:scale-105 rounded-3xl border-2 border-black transform transition-transform duration-300 mb-10"
+              className=" overflow-hidden rounded-3xl border-2 border-black transform transition-transform duration-300"
               style={
                 !imagesHovered
                   ? {
                       position: "absolute",
-                      top: `${randomTop}%`,
-                      left: `${randomLeft}%`,
+                      top:
+                        index < imagesArray.length / 2
+                          ? `${index * 7}%` // Move images downward
+                          : `${(imagesArray.length - index - 1) * 7}%`, // Move images upward
+                      left: `${index * 7}%`, // Move images to the right,
+                      zIndex:
+                        index < imagesArray.length / 2
+                          ? `${index * 7}` // Move images downward
+                          : `${(imagesArray.length - index - 1) * 7}`,
                     }
                   : {
                       zIndex: 20,
