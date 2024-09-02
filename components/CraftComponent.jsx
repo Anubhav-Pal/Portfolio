@@ -52,11 +52,14 @@ const CraftComponent = ({ img, heading, subheading, deployedLink, labels }) => {
           </Link>
           <span className="hidden sm:block font-semibold">{heading}</span>
         </div>
-        {labels.length!==0 && (
+        {labels.length !== 0 && (
           <div className="text-xs mt-1 sm:mt-0 flex flex-wrap gap-1">
-            {labels.map((label) => {
+            {labels.map((label,index) => {
               return (
-                <div className="px-2 py-1 rounded-md bg-gray-200 text-xs text-gray-400 font-normal">
+                <div
+                  key={index}
+                  className="px-2 py-1 rounded-md bg-gray-200 text-xs text-gray-400 font-normal"
+                >
                   {label}
                 </div>
               );

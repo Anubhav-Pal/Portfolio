@@ -37,7 +37,7 @@ export default function Page() {
       subheading:
         "A healthcare management app featuring patient registration, appointment booking, admin controls, multi-appointment support, and SMS notifications via Twilio.",
       deployedLink: "https://healthcareapp-anubhavpal.vercel.app/",
-      labels: ["NextJS", "TypeScript", "Appwrite", "Tailwind","Twilio"],
+      labels: ["NextJS", "TypeScript", "Appwrite", "Tailwind", "Twilio"],
     },
     {
       img: timeline,
@@ -68,7 +68,7 @@ export default function Page() {
       heading: "Card Deck Component",
       subheading:
         "Exploring Performance Optimization with requestAnimationFrame and useCallback in React",
-      deployedLink: "https://exquisite-concha-c26ccb.netlify.app/",
+      deployedLink: "https://crafts-cards-deck.vercel.app/",
       labels: ["Adv. Javascript", "Performance", "React", "Tailwind"],
     },
     {
