@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useState } from "react";
 import CraftComponent from "@/components/CraftComponent.jsx";
@@ -12,7 +11,9 @@ import {
   clouds,
   dashboard,
   dropdown,
+  gpt3page,
   lotus,
+  modernbank,
   plane,
   planeout,
   portfolio,
@@ -22,7 +23,9 @@ import {
   sft,
   sunset,
   timeline,
+  usabilityhub,
   vase,
+  deck,
 } from "@/public/assets/assets";
 
 export default function Page() {
@@ -33,57 +36,77 @@ export default function Page() {
       heading: "Appointly",
       subheading:
         "A healthcare management app featuring patient registration, appointment booking, admin controls, multi-appointment support, and SMS notifications via Twilio.",
-      depllink: "https://healthcareapp-anubhavpal.vercel.app/",
+      deployedLink: "https://healthcareapp-anubhavpal.vercel.app/",
+      labels: ["NextJS", "TypeScript", "Appwrite", "Tailwind","Twilio"],
     },
     {
       img: timeline,
       heading: "Timeliner",
       subheading:
         "Create timelines with multiple layout options and dynamic headings. Built using TLDraw.",
-      depllink: "https://tl-draw-timeline-anubhavpal.vercel.app/",
+      deployedLink: "https://tl-draw-timeline-anubhavpal.vercel.app/",
+      labels: ["React", "TypeScript", "TLDraw", "Tailwind"],
     },
     {
       img: dashboard,
       heading: "Admin Order Dashboard",
       subheading:
         "Manage Orders with Ease. Enabled with Google Authentication and Redux state management",
-      depllink: "https://assignment-task-sigma.vercel.app/",
+      deployedLink: "https://assignment-task-sigma.vercel.app/",
+      labels: ["React", "React-redux", "Auth0", "Tailwind"],
     },
     {
       img: chatbot,
       heading: "ChatAI",
       subheading:
         "An AI-powered chat companion for insightful conversations, built on Google Gemini API",
-      depllink: "https://chatappanubhav.vercel.app/",
+      deployedLink: "https://chatappanubhav.vercel.app/",
+      labels: ["React", "Gemini API", "Tailwind"],
+    },
+    {
+      img: deck,
+      heading: "Card Deck Component",
+      subheading:
+        "Exploring Performance Optimization with requestAnimationFrame and useCallback in React",
+      deployedLink: "https://exquisite-concha-c26ccb.netlify.app/",
+      labels: ["Adv. Javascript", "Performance", "React", "Tailwind"],
     },
     {
       img: dropdown,
       heading: "Interactive Dropdown",
       subheading:
         "Interactive Dropdown with Seamless Input Selection and Display",
-      depllink: "https://advanced-dropdown.vercel.app/",
+      deployedLink: "https://advanced-dropdown.vercel.app/",
+      labels: ["Javascript", "Array methods", "Tailwind"],
     },
     {
       img: portfolio,
       heading: "Portfolio",
       subheading:
-        "A sleek modern UI website showcasing my experience and projects",
-      depllink: "https://anubhavpal.vercel.app/",
+        "A sleek modern website showcasing my experience and projects",
+      deployedLink: "https://anubhavpal.vercel.app/",
+      labels: ["NextJS", "Tailwind"],
     },
     {
-      img: punjab,
-      heading: "PGKRAM Analytics Dashboard",
-      subheading:
-        "Analytics tool for PGKRAM website to increase employment in Punjab.",
-      depllink: "https://pgkram.netlify.app/",
+      img: modernbank,
+      heading: "Modern Bank Landing Page",
+      deployedLink: "https://luminous-sorbet-6f6b65.netlify.app/",
+      labels: ["UI", "React", "Tailwind", "landing page"],
     },
     {
-      img: abitco,
-      heading: "Abitco Creator page",
-      subheading: "A simple modern webpage",
-      depllink: "https://abitco.vercel.app/",
+      img: gpt3page,
+      heading: "GPT-3 Landing Page",
+      deployedLink: "https://reliable-arithmetic-67bfb8.netlify.app/",
+      labels: ["UI", "React", "Tailwind", "landing page"],
+    },
+    {
+      img: usabilityhub,
+      heading: "Usability Hub Landing Page",
+      deployedLink: "https://exquisite-concha-c26ccb.netlify.app/",
+      labels: ["UI", "landing page"],
     },
   ];
+
   const imagesArray = [
     plane,
     sunset,
@@ -138,7 +161,8 @@ export default function Page() {
                 img={craft.img}
                 heading={craft.heading}
                 subheading={craft.subheading}
-                depllink={craft.depllink}
+                deployedLink={craft.deployedLink || ""}
+                labels={craft.labels}
               />
             </div>
           ))}

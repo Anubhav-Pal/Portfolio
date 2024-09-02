@@ -18,13 +18,18 @@ import portfolio from "./portfolio.png";
 import dashboard from "./dashboard.png";
 import punjab from "./punjab.png";
 import appointly from "./appointly.png";
+import gpt3page from "./gpt3page.png";
+import modernbank from "./modernbank.png";
+import usabilityhub from "./usabilityhub.png";
 import timeline from "./timeline.png";
+import deck from "./deck.png";
 
 export {
   bar,
   Bng,
   clouds,
   lotus,
+  deck,
   plane,
   planeout,
   qutub,
@@ -41,4 +46,7 @@ export {
   portfolio,
   dashboard,
   punjab,
+  gpt3page,
+  modernbank,
+  usabilityhub,
 };
