@@ -50,7 +50,7 @@ const Contact = () => {
       <div className="flex gap-5">
         <div className="flex flex-col justify-center items-start gap-5">
           {socials.map((social) => (
-            <div className="flex text-sm gap-5">
+            <div className="flex text-sm gap-5" key={social}>
               <div>{social.platform}</div>
             </div>
           ))}
