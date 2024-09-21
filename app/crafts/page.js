@@ -30,6 +30,7 @@ import {
 
 export default function Page() {
   const [imagesHovered, setImagesHovered] = useState(false);
+  const [imageIndex, setImageIndex] = useState(-1);
   const craftArray = [
     {
       img: appointly,
@@ -170,8 +171,7 @@ export default function Page() {
       </div>
 
       <div
-        onMouseEnter={() => setImagesHovered(true)}
-        onMouseLeave={() => setImagesHovered(false)}
+        // onMouseLeave={() => setImagesHovered(false)}
         className={`${
           selected === "📸" ? "flex" : "hidden"
         } mt-10 py-5 relative h-full min-h-[300px] w-full  flex-wrap gap-5 justify-center items-center`}
@@ -180,39 +180,48 @@ export default function Page() {
           return (
             <div
               key={index}
-              onMouseEnter={() => setImagesHovered(true)}
-              className=" overflow-hidden rounded-3xl border-2 border-black transform transition-transform duration-300"
+              onMouseEnter={() => {
+                setImageIndex(index);
+                setImagesHovered(true);
+              }}
+              onMouseLeave={() => {
+                setImageIndex(-1);
+                setImagesHovered(false);
+              }}
+              className="relative overflow-hidden rounded-3xl border-2 border-black transform transition-transform ease-in-out duration-1000"
               style={
-                !imagesHovered
-                  ? index < imagesArray.length / 2
-                    ? {
-                        position: "absolute",
-                        top: `${index * 7}%`, // Move images downward
-                        left: `${index * 7}%`, // Move images to the right,
-                        zIndex:
-                          index < imagesArray.length / 2
-                            ? `${index * 7}` // Move images downward
-                            : `${(imagesArray.length - index - 1) * 7}`,
-                      }
-                    : {
-                        position: "absolute",
-                        position: "absolute",
-                        top: `${(imagesArray.length - index - 1) * 7}%`, // Move images downward
-                        right: `${(imagesArray.length - index - 1) * 7}%`, // Move images to the right,
-                        zIndex:
-                          index < imagesArray.length / 2
-                            ? `${index * 7}` // Move images downward
-                            : `${(imagesArray.length - index - 1) * 7}`,
-                      }
+                index < imagesArray.length / 2
+                  ? {
+                      position: "absolute",
+                      top: imageIndex === index ? "-50px" : `0`,
+                      left: `${index * 7}%`,
+                      zIndex:
+                        imageIndex === index
+                          ? 999
+                          : index < imagesArray.length / 2
+                          ? `${index * 7}`
+                          : `${(imagesArray.length - index - 1) * 7}`,
+                      transition:
+                        "top 0.1s ease-in-out, z-index 0.3s ease-in-out", // Smooth transition for moving up and z-index change
+                    }
                   : {
-                      zIndex: 20,
-                      transform: "scale(1.05)",
+                      position: "absolute",
+                      top: imageIndex === index ? "-50px" : `0`,
+                      right: `${(imagesArray.length - index - 1) * 7}%`,
+                      zIndex:
+                        imageIndex === index
+                          ? 999
+                          : index < imagesArray.length / 2
+                          ? `${index * 7}`
+                          : `${(imagesArray.length - index - 1) * 7}`,
+                      transition:
+                        "top 0.1s ease-in-out, z-index 0.3s ease-in-out", // Smooth transition for moving up and z-index change
                     }
               }
             >
               <Image
                 src={src}
-                className="w-32 h-32 sm:w-48 hover:scale-105  transform transition-transform duration-300 sm:h-48 md:w-64 md:h-64 object-cover object-center"
+                className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover object-center"
                 alt={`image-${index}`}
               />
             </div>
