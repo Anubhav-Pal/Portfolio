@@ -1,56 +1,49 @@
+"use client";
+import { useState } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 const companies = [
   {
-    position: "SDE Intern",
+    position: "Software Engineering Intern",
+    companyName: "Konnectbox",
+    companyWebsite: "Konnectbox.com",
+    companyWebsiteLink: "https://www.linkedin.com/company/konnect-box/",
+    workedOn: [
+      "Building a cloud platform that enables users to learn technologies through interactive labs, tailored to various skill sets and industries for effective learning.",
+      "Using TypeScript, React, NextJS, Tailwind for building frontend and UI. Using Figma for design conversions.",
+    ],
+    startingMonth: "Sept, 2024",
+    endingMonth: "Present",
+  },
+  {
+    position: "Software Development Engineering Intern",
     companyName: "OPDoc",
     companyWebsite: "opdoc.in",
     companyWebsiteLink: "https://www.opdoc.in/",
     workedOn: [
-      "Currently building experiences for concerned users, doctors and learners who can make use of personalized AI assistant to understand their patients fast and cure them faster.",
+      "Built a healthcare platform for patients, doctors, and learners, utilizing a personalized AI assistant to enhance patient understanding and accelerating treatment processes, catering to a potential user base of over 50k+ hospitals.",
+      "Built multiple layouts, dashboards, chatbot, landing UIs using ReactJS, Typescript and Material UI. Integrated Google Analytics.",
     ],
     startingMonth: "June, 2024",
-    endingMonth: "present",
+    endingMonth: "Sept, 2024",
   },
   {
-    position: "Frontend Software Engineering Intern",
+    position: "Frontend Software Engineer Intern",
     companyName: "ClientFlowX",
     companyWebsite: "clientflowx.com",
     companyWebsiteLink: "https://www.clientflowx.com/",
     workedOn: [
-      "Developed an admin dashboard and multiple pages using Next.js and TypeScript, seamlessly integrating third-party applications and backend APIs.",
-      "Developing a no-code AI website builder with custom components utilizing the Grapejs library.",
+      "Developed an admin dashboard, funnel creator and multiple pages using Next.js, TypeScript and shadCN, seamlessly integrating third-party applications and backend APIs.",
+      "Built a no-code AI website builder with custom components utilizing the Grapejs library.",
     ],
     startingMonth: "March, 2024",
     endingMonth: "June 2024",
   },
-  {
-    position: "Software Engineering Intern",
-    companyName: "Wonder Learn Games",
-    companyWebsite: "",
-    companyWebsiteLink: "",
-    workedOn: [
-      "Developed engaging user interfaces and interactive components using React for a teen learning application, ensuring seamless navigation and user experience.",
-      "Learned about tools and technologies such as ReactNative and Native Features.",
-    ],
-    startingMonth: "February, 2024",
-    endingMonth: "",
-  },
-  {
-    position: "Frontend Web Developer Intern",
-    companyName: "Altruism Labs",
-    companyWebsite: "altruismlabs.com",
-    companyWebsiteLink: "http://www.altruismlabs.com/",
-    workedOn: [
-      "Designed and developed sophisticated interactive React components for seamless web and mobile experiences.",
-      "Successfully integrated the Chart.js library to enhance data visualization capabilities.",
-    ],
-    startingMonth: "December, 2023",
-    endingMonth: "February, 2024",
-  },
 ];
 
 const Work = () => {
+  const [ishovered, setHoveredPos] = useState(false);
+
   return (
     <div className="flex flex-col gap-8">
       {companies.map(
@@ -66,20 +59,30 @@ const Work = () => {
             {/* Added key prop */}
             <div className="flex sm:flex-row flex-col items-start justify-between gap-2">
               <div>
-                <div className="capitalize text-lg">
+                <div className="capitalize text-md">
                   {company.position}, {company.companyName}
                 </div>
                 {company.companyName === "Wonder Learn Games" ? (
                   ""
                 ) : (
-                  <div className="flex items-center gap-[2px]">
+                  <div
+                    className="flex items-center gap-[2px] text-sd hover:text-black transition-all ease-in-out"
+                    onMouseEnter={() => setHoveredPos(company.companyName)}
+                    onMouseLeave={() => setHoveredPos("")}
+                  >
                     <div className="text-sm">
                       at,{" "}
                       <a href={company.companyWebsiteLink}>
                         {company.companyWebsite}
                       </a>
                     </div>
-                    <div>
+                    <div
+                      className={`${
+                        ishovered === company.companyName
+                          ? "translate-x-1 transition-all ease-in-out"
+                          : ""
+                      }`}
+                    >
                       <MdOutlineArrowOutward />
                     </div>
                   </div>
@@ -96,9 +99,9 @@ const Work = () => {
               </div>
             </div>
             <div>
-              <ul className="list-disc flex flex-col gap-3 list-inside">
+              <ul className="list-disc flex flex-col gap-3 list-outside">
                 {company.workedOn.map((thingWorkedOn, idx) => (
-                  <li className="text-sd text-sm" key={idx}>
+                  <li className="text-sd text-sm ml-3" key={idx}>
                     {thingWorkedOn}
                   </li>
                 ))}

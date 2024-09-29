@@ -45,9 +45,9 @@ const Contact = () => {
     },
   ];
   return (
-    <div id="socials">
-      <div className="font-medium mb-4">contact, socials.</div>
-      <div className="flex gap-5">
+    <div id=" flex flex-col gap-5">
+      <div className="font-medium socials">contact, socials.</div>
+      <div className="flex gap-5 mt-5">
         <div className="flex flex-col justify-center items-start gap-5">
           {socials.map((social) => (
             <div className="flex text-sm gap-5" key={social}>
@@ -59,16 +59,24 @@ const Contact = () => {
           {socials.map((social) => (
             <div key={social} className="flex text-sm gap-5">
               <div
-                className="text-sd flex items-center gap-1"
-                onMouseEnter={() => setHoveredPos(true)}
-                onMouseLeave={() => setHoveredPos(false)}
+                className={` ${
+                  ishovered === social.platform ? "" : "text-sd"
+                } flex items-center gap-1`}
+                onMouseEnter={() => setHoveredPos(social.platform)}
+                onMouseLeave={() => setHoveredPos("")}
               >
                 <div>
                   <a href={social.actualLink} target="_blank">
                     {social.link}
                   </a>
                 </div>
-                <div className={`${ishovered === true ? "ml-5" : ""}`}>
+                <div
+                  className={`${
+                    ishovered === social.platform
+                      ? "translate-x-1 transition-all ease-in-out"
+                      : ""
+                  }`}
+                >
                   <MdOutlineArrowOutward />
                 </div>
               </div>

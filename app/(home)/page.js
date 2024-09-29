@@ -11,7 +11,7 @@ export default function Page() {
       <div className="flex flex-col gap-10 mb-24">
         <Aboutme />
         <Works />
-        <Projects />
+        {/* <Projects /> */}
         <Achievements />
         <Contact />
       </div>
